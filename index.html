@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        body {
+            margin-top: 20px;
+            background-color: whitesmoke; 
+        }
+        hr {
+            background-color: lightgray;
+        }
+        .authorName {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        .authorLink {
+            color: lightgray;
+        }
+        .authorLink:hover {
+            color: lightgray;
+        }
+        .chapterLink {
+            padding: 5px;
+        }
+        .jumbotron {
+            background-color: rgb(59,76,98);
+            color: white;
+        }
+        .card {
+            background-color: rgb(234, 234, 234); 
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>An Animated Introduction to Elixir</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3"><em>An Animated Introduction to Elixir</em></h1>
+            <hr class="my-4">
+            <p class="authorName"><a class="authorLink" href="https://markm208.github.io/" target="_blank">Mark Mahoney</a></p>
+        </div>
+        <p>
+            <a class="introLink h5" data-toggle="collapse" href="#intro" role="button" aria-expanded="false" aria-controls="intro">
+                Introduction
+            </a>
+        </p>
+        <div class="collapse show" id="intro">
+            <div class="card card-body">
+                <p>
+                    This collection of guided code walk-throughs is an introduction to the functonal programming language Elixir.
+                    Elixir is based on another really cool language called Erlang.
+                    The Erlang VM is a battle tested virtual machine that excels at concurrency.
+                </p>
+                <p>
+                    I begin by covering the basics of the Elixir programming language. 
+                    Next, I cover the concurrency in Elixir.
+                    The last chapter discusses Phoenix the X platform. 
+                </p>
+                <p>
+                    If you'd like to stay connected and get updates when I add new playbacks you can follow me on twitter: <a href="https://twitter.com/markm208" target="_blank">@markm208</a>.
+                </p>
+             </div>
+        </div>
+
+        <p>
+            <a class="chapterLink h5" data-toggle="collapse" href="#chapter1" role="button" aria-expanded="false" aria-controls="chapter1">
+                Chapter 1 Elixir
+            </a>
+        </p>
+        <div class="collapse show" id="chapter1">
+            <table class="table table-hover">
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/01/index.html" target="_blank" class="playback-title">1.1 Hello Elixir!!!</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/02/index.html" target="_blank" class="playback-title">1.2 Numbers and the Match Operator</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/03/index.html" target="_blank" class="playback-title">1.3 Functions and More Matching</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/04/index.html" target="_blank" class="playback-title">1.4 Modules and More Matching with SimpleMath</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/05/index.html" target="_blank" class="playback-title">1.5 Closures</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/06/index.html" target="_blank" class="playback-title">1.6 Ranges and the Enum Module</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/07/index.html" target="_blank" class="playback-title">1.7 Tuples</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/08/index.html" target="_blank" class="playback-title">1.8 Maps</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/09/index.html" target="_blank" class="playback-title">1.9 SimpleDateFormatter Module with Maps</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/10/index.html" target="_blank" class="playback-title">1.10 Lists, Matching, and Recursion</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/11/index.html" target="_blank" class="playback-title">1.11 Poker Probabilities</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter1/12/index.html" target="_blank" class="playback-title">1.12 Adding Tests to the Mix</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <p>
+            <a class="chapterLink h5" data-toggle="collapse" href="#chapter2" role="button" aria-expanded="false" aria-controls="chapter2">
+                Chapter 2 Concurrency- Coming Soon
+            </a>
+        </p>
+        <div class="collapse show" id="chapter2">
+            <!--
+            <table class="table table-hover">
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/01/index.html" target="_blank" class="playback-title">2.1 Flutter Hello World</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/02/index.html" target="_blank" class="playback-title">2.2 flutter create demo_app</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/03/index.html" target="_blank" class="playback-title">2.3 ListViews</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/04/index.html" target="_blank" class="playback-title">2.4 Laying Out Widgets</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/05/index.html" target="_blank" class="playback-title">2.5 Navigation in Flutter</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/06/index.html" target="_blank" class="playback-title">2.6 Forms</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="playbackTitleLink" href="chapter2/07/index.html" target="_blank" class="playback-title">2.7 Using Packages in Flutter</a>
+                    </td>
+                </tr>
+            </table>
+            -->
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+<!-- Default Statcounter code for Updated Clojure Book
+https://personal.carthage.edu/mmahoney/courses/CSC3210/clojure/
+-->
+    <script type="text/javascript">
+        var sc_project=12421931; 
+        var sc_invisible=1; 
+        var sc_security="1d9b40f0"; 
+    </script>
+    <script type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js"
+        async>
+    </script>
+    <noscript>
+        <div class="statcounter">
+            <a title="Web Analytics"
+                href="https://statcounter.com/" target="_blank"><img
+                class="statcounter"
+                src="https://c.statcounter.com/12421931/0/1d9b40f0/1/"
+                alt="Web Analytics">
+            </a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+  </body>
+</html>
