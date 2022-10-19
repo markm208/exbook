@@ -72,12 +72,14 @@ class AceEditor extends HTMLElement {
         .insertOnLine {
           color: rgb(33, 130, 36);
           font-weight: bold;
+          background-color: rgb(52, 52, 52);
         }
 
         .deleteOnLine {
           text-decoration-line: underline;
           text-decoration-color: red;
           text-decoration-style: solid;
+          background-color: rgb(52, 52, 52);
         }
       </style>
 
@@ -155,9 +157,24 @@ class AceEditor extends HTMLElement {
         this.aceEditor.getSession().setMode(fileMode.mode);
       }
 
-      //scroll to the most recent line number to show the latest code
-      if(this.playbackEngine.mostRecentChanges.fileEditLineNumber > 0) {
-        this.aceEditor.scrollToLine(this.playbackEngine.mostRecentChanges.fileEditLineNumber, true, true);
+      //get the position in the file of the last chatacter entered
+      const scrollToLine = this.playbackEngine.mostRecentChanges.fileEditLineNumber - 1;
+      const scrollToColumn = this.playbackEngine.mostRecentChanges.fileEditColumn - 1;
+
+      //if there is a comment at the end of the movement
+      if(this.playbackEngine.mostRecentChanges.endedOnAComment) {
+        //if there is selected code in the comment
+        if(this.playbackEngine.activeComment.selectedCodeBlocks.length > 0) {
+          //do nothing because the comment's selected code will be highlighted
+        } else { //no selected code in the comment
+          //if(this.playbackEngine.mostRecentChanges.fileEditLineNumber > 0) {
+            this.scrollTo(scrollToLine, scrollToColumn);
+          //}
+        }
+      } else { //there is no comment here
+        //if(this.playbackEngine.mostRecentChanges.fileEditLineNumber > 0) {
+          this.scrollTo(scrollToLine, scrollToColumn);
+        //}
       }
 
       //go through the markers and highlight them
@@ -165,6 +182,12 @@ class AceEditor extends HTMLElement {
     }
     //if there is an active search highlight the code
     this.highlightSearch();
+  }
+
+  scrollTo(scrollToLine, scrollToColumn) {
+    if(!this.aceEditor.isRowVisible(scrollToLine + 2) || !this.aceEditor.isRowVisible(scrollToLine - 2)) {  
+      this.aceEditor.renderer.scrollCursorIntoView({row: scrollToLine, column: scrollToColumn}, 0.5);
+    }
   }
 
   updateEditorFontSize(newFontSize) {
@@ -285,7 +308,9 @@ class AceEditor extends HTMLElement {
       }
       //scroll to the highlighted code
       const scrollToLine = this.playbackEngine.activeComment.selectedCodeBlocks[0].startRow;
-      this.aceEditor.scrollToLine(scrollToLine, true, true);
+      const scrollToColumn = this.playbackEngine.activeComment.selectedCodeBlocks[0].startColumn;
+      //this.aceEditor.scrollToLine(scrollToLine, true, true);
+      this.scrollTo(scrollToLine, scrollToColumn);
     }
   }
 

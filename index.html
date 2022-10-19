@@ -54,16 +54,38 @@
         <div class="collapse show" id="intro">
             <div class="card card-body">
                 <p>
-                    This collection of guided code walk-throughs is an introduction to the functonal programming language Elixir.
-                    Elixir is based on another really cool language called Erlang.
-                    The Erlang VM is a battle tested virtual machine that excels at concurrency.
+                    This is a collection of guided code walk-throughs introducing the functional, concurrent programming language, Elixir.
+                    Elixir is based on another really cool language called <a href="https://www.erlang.org" tartget="_blank">Erlang</a>.
+                    If you have never programmed in the functional paradigm or explicitly created and managed processes then learning Elixir should be a fascinating introduction into these topics.
                 </p>
                 <p>
-                    I begin by covering the basics of the Elixir programming language. 
-                    Next, I cover the concurrency in Elixir.
+                    I begin by covering the basics of the Elixir programming language.
+                    Elixir is a functional programming language that relies heavily on pattern matching. 
+                    Pattern matching makes it so that you almost never need to write an 'if statement'.
+                    Elixir also has immutable data.
+                    Immutable data cannot change. 
+                    I discuss 'efficient immutability' and the built in data structures throughout the book.
+                    Elixir has excellent support for high order functions to process collections of data.
+                    These high order functions make it so that you rarely need to write a traditional loop.
+                    Elixir supports tail call optimizations for recursive functions which also helps reduce the number of loops that one has to write.
+                </p>
+                <p>
+                    In the second part of this book, I cover concurrency in Elixir.
+                    Elixir makes it easy to create many communicating processes.
+                    Using processes really changes the way one thinks about solving problems.
+                    Each process has its own flow of control, call stack, and mailbox used to receive and queue messages sent from other processes.  
+                    There are built in functions so that one process can send and receive messages to others.
+                    I go over a few interesting problems that use processes in this chapter. 
+                </p>
+                <p>
+                    This book covers only the basics of Elixir. 
+                    If you want a more comprehensive resource, I recommend <a href="https://pragprog.com/titles/elixir16/programming-elixir-1-6/" target="_blank">Programming Elixir</a> by Dave Thomas.
+                    That book goes into great detail about Elixir and OTP which is used to manage complex groups of concurrent processes.
+                    These programs should serve as a good introduction to the language and functional and concurrent paradigms.
                 </p>
                 <p>
                     If you'd like to stay connected and get updates when I add new playbacks you can follow me on twitter: <a href="https://twitter.com/markm208" target="_blank">@markm208</a>.
+                    You can contact me directly at <a href="mailto:markm208@gmail.com" target="_blank">markm208@gmail.com</a>. Let me know what you think!
                 </p>
              </div>
         </div>
@@ -135,59 +157,43 @@
                         <a class="playbackTitleLink" href="chapter1/12/index.html" target="_blank" class="playback-title">1.12 Recursion in Elixir</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a class="playbackTitleLink" href="chapter1/13/index.html" target="_blank" class="playback-title">1.13 Adding Tests to the Mix</a>
-                    </td>
-                </tr>
             </table>
         </div>
         
         <p>
             <a class="chapterLink h5" data-toggle="collapse" href="#chapter2" role="button" aria-expanded="false" aria-controls="chapter2">
-                Part 2 Concurrency- Coming Soon
+                Part 2 Concurrency
             </a>
         </p>
         <div class="collapse show" id="chapter2">
-            <!--
+            
             <table class="table table-hover">
                 <tr>
                     <td>
-                        <a class="playbackTitleLink" href="chapter2/01/index.html" target="_blank" class="playback-title">2.1 Flutter Hello World</a>
+                        <a class="playbackTitleLink" href="chapter2/01/index.html" target="_blank" class="playback-title">2.1 Adding Tests to the Mix</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="playbackTitleLink" href="chapter2/02/index.html" target="_blank" class="playback-title">2.2 flutter create demo_app</a>
+                        <a class="playbackTitleLink" href="chapter2/02/index.html" target="_blank" class="playback-title">2.2 Process Basics</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="playbackTitleLink" href="chapter2/03/index.html" target="_blank" class="playback-title">2.3 ListViews</a>
+                        <a class="playbackTitleLink" href="chapter2/03/index.html" target="_blank" class="playback-title">2.3 Prime Sieve</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="playbackTitleLink" href="chapter2/04/index.html" target="_blank" class="playback-title">2.4 Laying Out Widgets</a>
+                        <a class="playbackTitleLink" href="chapter2/04/index.html" target="_blank" class="playback-title">2.4 Calendar with Processes</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="playbackTitleLink" href="chapter2/05/index.html" target="_blank" class="playback-title">2.5 Navigation in Flutter</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a class="playbackTitleLink" href="chapter2/06/index.html" target="_blank" class="playback-title">2.6 Forms</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a class="playbackTitleLink" href="chapter2/07/index.html" target="_blank" class="playback-title">2.7 Using Packages in Flutter</a>
+                        <a class="playbackTitleLink" href="chapter2/05/index.html" target="_blank" class="playback-title">2.5 Poker with Processes</a>
                     </td>
                 </tr>
             </table>
-            -->
         </div>
     </div>
 
